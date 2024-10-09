@@ -3,16 +3,26 @@
 <head>
 <title> Bhargav Modukuru's Website</title>
 <link rel="stylesheet" href="stylesheet.css">
+<script src="main.js"></script> <!-- linking javascript code -->
 <meta charset="utf-8">
 </head>
+<button id="nameButton">What is your name</button>
+<p id="displayName"></p>
 <body>
-    <h1>Welcome!</h1>
+    <div id="sidebar">
+        <nav> <!-- Adding my top 3 headers to the navigation bar -->
+            <a href="#education" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Education</a>
+            <a href="#educational awards & recognition" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Educational Awards & Recognition</a>
+            <a href="#extracurricular involvement" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Extracurricular Involvement</a>
+        </nav>
+    </div>
+    <h1>About Me</h1>
+    <img id="profileImage" src="/Users/bhargavmodukuru/Downloads/IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()"> <!-- enabling toggle to enlarge image size -->
     <p>My name is Bhargav Modukuru, I'm a 4th and final year Business Technology Management student at Toronto Metropolitan University pursuing a 
         minor in Marketing. This webpage is a walk-through of my educational history, some courses I've taken along the way and speaks about amazing 
         student clubs I got to be a part of throughout my years.
-    </p>
 <hr>
-<h2>Education</h2>
+<h2 id="education">Education</h2> <!-- Hyperlinking the education section to the sidebar -->
 <p>Bachelors of Commerce,BCom: Toronto Metropolitan University
     <br>
     Dates Attended: September 2021 - Present
@@ -27,13 +37,13 @@
     Dates Attended: September 2019 - June 2021
 </p>
 <hr>
-<h2>Educational Awards & Recognition</h2>
+<h2 id="educational awards & recognition"> Educational Awards & Recognition</h2>
 <ul>
     <li>Entrance Scholarship of $1000, Toronto Metropolitan University</li>
     <li>Top 25% Most Engaged Senior Student, Toronto Metropolitan University</li>
 </ul>
 <hr>
-<h2>Extracurricular Involvement</h2>
+<h2 id="extracurricular involvement">Extracurricular Involvement</h2>
 <p>Toronto Metropolitan University
     <br>
     <ul>
@@ -50,7 +60,7 @@
     <li>Photographer @ Thornhill Secondary Newspaper</li>
 </ul>
 <hr>
-<h2>My favourite courses</h2>
+<h2>Favourite Courses</h2>
 <ol>
     <li>
         ITM780
@@ -76,7 +86,7 @@
         <div class="table-cell"><a href="https://www.torontomu.ca/">Toronto Metropolitan University</a></div>
         <div class="table-cell">University Information can be accessed here</div>
     </div>
-</div>
 
+</div>
 </body>
 </html>

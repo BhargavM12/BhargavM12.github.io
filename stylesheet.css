@@ -1,21 +1,50 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
-    background-color:bisque;
-    color: #333;
+    background-color:rgb(11, 55, 99);
+    color: #ffffff;
     margin: 20px
 }
+#profileImage { 
+    max-width: 200px; /* Setting max image size to 200 */
+    border-radius: 4px;
+}
 
+#sidebar {
+    background-color: #354c64; /* Dark blue background */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px; /* Add padding inside the sidebar */
+    width: 300px; /* Set width of sidebar */
+    height: 100%; /* Full height */
+}
+
+nav {
+    display: flex;
+    flex-direction: row; 
+}
+
+nav a {
+    color: white; /* Default link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add padding for clickable area */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+nav a:hover {
+    background-color: #34495e; /* Darker shade for hover effect */
+    color: #ecf0f1; /* Slightly lighter text color on hover */
+}
 h1{
     font: size 32pt;
-    color:blueviolet; 
+    color:rgb(255, 255, 255); 
     font-weight: bolder;
 
 }
 
 h2 {
     font-size: 26pt;
-    color: blue;
+    color: rgb(222, 222, 222);
 
 }
 
@@ -27,12 +56,12 @@ h3{
 
 p {
     font-size: 14pt;
-    color:darkslategray;
+    color:rgb(230, 240, 249);
     line-height: 1.6;
 }
 
 a:link, a:visited {
-    color:violet; 
+    color:rgb(200, 137, 55); 
     text-decoration: none; 
 }
 
