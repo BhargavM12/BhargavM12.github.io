@@ -1,98 +1,194 @@
+/* General styling for the entire webpage */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    background-color:rgb(11, 55, 99);
-    color: #ffffff;
-    margin: 20px
-}
-#profileImage { 
-    max-width: 200px; /* Setting max image size to 200 */
-    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif; /* Sets font family */
+    font-size: 14px; /* Sets default font size */
+    background-color: rgb(11, 55, 99); /* Dark blue background */
+    color: #ffffff; /* White text color */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
 }
 
+/* Header styling */
+header {
+    text-align: center; /* Centers the header text */
+    padding: 20px; /* Adds padding for space around the text */
+}
+
+/* Sidebar styling */
 #sidebar {
-    background-color: #354c64; /* Dark blue background */
-    color: #ffffff; /* White text for contrast */
-    padding: 20px; /* Add padding inside the sidebar */
-    width: 300px; /* Set width of sidebar */
-    height: 100%; /* Full height */
+    width: 100%; /* Sets sidebar to full-width */
+    background-color: #2c3e50; 
 }
 
-nav {
-    display: flex;
-    flex-direction: row; 
+#sidebar ul {
+    display: flex; /* Makes items in the sidebar flexible */
+    justify-content: space-around; /* Evenly spaces items horizontally */
+    padding: 10px 0; /* Adds vertical padding */
+    margin: 0; /* Removes default list margin */
 }
 
-nav a {
-    color: white; /* Default link color */
-    text-decoration: none; /* Remove underline from links */
-    padding: 10px; /* Add padding for clickable area */
-    border-radius: 4px; /* Slightly rounded corners */
-    transition: background-color 0.3s ease; /* Smooth background transition */
+#sidebar ul li {
+    margin: 0; /* Ensures list items have no margin */
 }
 
-nav a:hover {
-    background-color: #34495e; /* Darker shade for hover effect */
-    color: #ecf0f1; /* Slightly lighter text color on hover */
+/* Styling for navigation links */
+.nav-link {
+    display: inline-block; /* Allows links to be inline with padding */
+    margin: 10px 0; /* Adds vertical spacing between links */
+    padding: 10px 15px; /* Adds padding inside links */
+    background-color: #064385; /* Blue background for links */
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounds corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
-h1{
-    font: size 32pt;
-    color:rgb(255, 255, 255); 
-    font-weight: bolder;
 
+button.nav-link {
+    background-color: #007bff; /* Button color to match links */
+    border: none; /* Removes button border */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Hover effect for buttons and links */
+button.nav-link:hover, .nav-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #ffffff; /* Ensures text color stays white */
+}
+
+/* Main Heading (h1) styling */
+h1 {
+    font-size: 30pt; /* Large font size */
+    color: #ffffff; /* White color */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Adds space below heading */
+}
+
+/* Subheading (h2) styling */
 h2 {
-    font-size: 26pt;
-    color: rgb(222, 222, 222);
-
+    font-size: 22pt; /* Medium font size */
+    color: #e0e0e0; /* Light gray color */
+    margin-top: 40px; /* Adds space above subheading */
 }
 
-h3{ 
-    font-size: 20pt;
-    color:darkgoldenrod; 
-    font-weight: normal;
+/* Profile Image styling */
+img#profileImage {
+    max-width: 150px; /* Limits image width */
+    border-radius: 8px; /* Slightly rounded corners */
+    margin: 20px auto; /* Centers image with vertical margin */
+    display: block; /* Makes the image a block element */
 }
 
+/* Paragraph styling */
 p {
-    font-size: 14pt;
-    color:rgb(230, 240, 249);
-    line-height: 1.6;
+    font-size: 14pt; /* Slightly larger font size */
+    color: #e6f0f9; /* Light blue color for text */
+    line-height: 1.6; /* Increases line spacing */
+    text-align: center; /* Centers paragraph text */
+    margin: 0 auto; /* Centers paragraph within container */
+    width: 70%; /* Limits paragraph width */
 }
 
-a:link, a:visited {
-    color:rgb(200, 137, 55); 
-    text-decoration: none; 
+/* Table styling */
+.table-container {
+    display: table; /* Displays the container as a table */
+    width: 100%; /* Full width for container */
+    margin: 20px 0; /* Vertical spacing */
+    text-align: center; /* Centers text within cells */
 }
 
-a:hover{
-    color:crimson; 
-    text-decoration: underline;
+.table-row {
+    display: table-row; /* Each row styled as a table row */
 }
 
-a:active{
-    color: wheat;
-} 
-
-ul{
-    list-style-type:square; 
-    padding-left:20px;
+.table-cell {
+    display: table-cell; /* Each cell styled as a table cell */
+    padding: 10px; /* Adds padding within cells */
+    border: 1px solid #ffffff; /* White border for cells */
 }
 
-hr {
-    margin: 20px 0; 
+/* Form styling */
+form {
+    background-color: #ffffff; /* White background for form */
+    border-radius: 8px; /* Rounds form corners */
+    padding: 20px 40px; /* Adds space inside the form */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: 100%; /* Full width of form container */
+    max-width: 500px; /* Limits form width */
+    margin: 20px auto; /* Centers form with vertical spacing */
 }
 
-.table-container{
-    display:table; 
-    width: 100%; 
-    margin-top: 20px; 
+/* Additional heading styles within form */
+h2, h4 {
+    color: #333; /* Dark text color */
+    font-size: 1.2em; /* Slightly larger font size */
+    text-align: center; /* Centers text */
 }
-.table-row{
-    display: table-row;
+
+/* Label styling */
+label {
+    display: block; /* Each label on a new line */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin-bottom: 5px; /* Space below label */
+    color: #555; /* Medium gray color */
 }
-.table-cell{
-    display: table-cell; 
-    padding: 10px; 
-    border: 1px solid #fff; 
+
+/* Input and select fields styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%; /* Full width for fields */
+    padding: 10px; /* Inner padding */
+    margin: 8px 0 16px; /* Space around elements */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Standard font size */
+}
+
+/* Checkbox and radio styling */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px; /* Space between input and label */
+}
+
+select, textarea {
+    background-color: #f9f9f9; /* Light background for select and text areas */
+}
+
+/* Submit and reset button styling */
+input[type="submit"],
+input[type="reset"] {
+    width: 48%; /* Each button takes half width */
+    padding: 10px; /* Adds padding inside buttons */
+    font-size: 1em; /* Standard font size */
+    color: #fff; /* White text */
+    background-color: #0073e6; /* Blue background */
+    border: none; /* Removes button border */
+    border-radius: 4px; /* Rounds button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Reset button specific color */
+input[type="reset"] {
+    background-color: #999; /* Gray background */
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Reset button hover effect */
+input[type="reset"]:hover {
+    background-color: #777; /* Darker gray on hover */
+}
+
+/* Button container layout */
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block; /* Aligns buttons inline */
+    width: calc(50% - 5px); /* Each button half width minus small margin */
+    margin: 5px 2px; /* Adds space around buttons */
 }

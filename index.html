@@ -1,92 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Bhargav Modukuru's Website</title>
-<link rel="stylesheet" href="stylesheet.css">
-<script src="main.js"></script> <!-- linking javascript code -->
-<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>Bhargav Modukuru's Website</title>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to the css stylesheet -->
+    <script src="main.js"></script>   <!-- Link to the external JavaScript filey -->
 </head>
-<button id="nameButton">What is your name</button>
-<p id="displayName"></p>
+
 <body>
-    <div id="sidebar">
-        <nav> <!-- Adding my top 3 headers to the navigation bar -->
-            <a href="#education" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Education</a>
-            <a href="#educational awards & recognition" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Educational Awards & Recognition</a>
-            <a href="#extracurricular involvement" class="nav-link" onmouseover="highlightLink(this)" onmouseout="resetLink(this)">Extracurricular Involvement</a>
+    <header>
+        <h1>Meet Bhargav Modukuru</h1>  <!-- Main webpage header-->
+        <button onclick="askName()">Enter Your Name</button>
+        <p id="displayName"></p>  <!-- Display name inputted in the prompt -->
+    </header>
+
+    <div id="sidebar"> 
+        <nav aria-label="Main Navigation">
+            <ul>
+                <a href="mailto:bhargavamodukuru@gmail.com" class="nav-link" target="_blank">Contact</a></li>
+                <a href="https://drive.google.com/file/d/1z1vtUFjIrKnYh0ztZPBSjQbHUUAIITr0/view?usp=sharing" class="nav-link" target="_blank">Resume</a></li> <!-- link to resume  -->
+                <a href="https://www.linkedin.com/in/bhargav-modukuru/" class="nav-link" target="_blank">LinkedIn</a></li> <!-- LinkedIN URL -->
+                <button onclick="window.location.href='forms_index.html'" class="nav-link">Chat with Me</button></li> <!-- Added a chat button to the navigation, linking the form for better navigation  -->
+            </ul>
         </nav>
     </div>
-    <h1>About Me</h1>
-    <img id="profileImage" src="IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()"> <!-- enabling toggle to enlarge image size -->
-    <p>My name is Bhargav Modukuru, I'm a 4th and final year Business Technology Management student at Toronto Metropolitan University pursuing a 
-        minor in Marketing. This webpage is a walk-through of my educational history, some courses I've taken along the way and speaks about amazing 
-        student clubs I got to be a part of throughout my years.
-<hr>
-<h2 id="education">Education</h2> <!-- Hyperlinking the education section to the sidebar -->
-<p>Bachelors of Commerce,BCom: Toronto Metropolitan University
-    <br>
-    Dates Attended: September 2021 - Present
-    <br>
-    Major: Business Technology Management
-    <br>
-    Minor: Marketing
-    <br>
-    <br>
-    High School: Thornhill Secondary School 
-    <br>
-    Dates Attended: September 2019 - June 2021
-</p>
-<hr>
-<h2 id="educational awards & recognition"> Educational Awards & Recognition</h2>
-<ul>
-    <li>Entrance Scholarship of $1000, Toronto Metropolitan University</li>
-    <li>Top 25% Most Engaged Senior Student, Toronto Metropolitan University</li>
-</ul>
-<hr>
-<h2 id="extracurricular involvement">Extracurricular Involvement</h2>
-<p>Toronto Metropolitan University
-    <br>
-    <ul>
-        <li>Creative Director @ Ted Rogers Sales Club</li>
-        <li>Corporate Relations Associate @AIESEC in TMU</li>
-        <li>University Relations Manager/Social Media Manager @ AIESEC in TMU</li>
-        <li>Local Committee President @ AIESEC in TMU</li>
-    </ul>
-</p>
-<p>Thornhill Secondary School</p>
-<ul>
-    <li>Graphic Designer @ Thornhill Athletic Council</li>
-    <li>U18 Soccer, Right Winger</li>
-    <li>Photographer @ Thornhill Secondary Newspaper</li>
-</ul>
-<hr>
-<h2>Favourite Courses</h2>
-<ol>
-    <li>
-        ITM780
-        <dd>ITM780 is a course I find useful and interesting as I've always been intrigued to learn how to make/design a website</dd>
-    </li>
-    <li>
-        ITM750
-        <dd>This course discusses Information System Project Management and it is a class I look forward to attending to understand how high-value projects are lead in the corporate world</dd>
-    </li>
-    <li>
-        ITM618
-        <dd> This course was useful as it taught me how to use Python for decision making, I was able hone my hard skills in this language by generating scatter plot graphs, histograms and bar charts from raw data </dd>
-    </li>
-</ol>
-<hr>
-<h2>Contact Information</h2>
-<div class="table-container">
-    <div class="table-row">
-        <div class="table-cell"><a href="https://www.linkedin.com/in/bhargav-modukuru/">LinkedIn</a></div>
-        <div class="table-cell">Connect with me on linkedin</div>
-    </div>
-    <div class="table-row">
-        <div class="table-cell"><a href="https://www.torontomu.ca/">Toronto Metropolitan University</a></div>
-        <div class="table-cell">University Information can be accessed here</div>
-    </div>
 
-</div>
+    <main>
+        <section id="about">
+            <img id="profileImage" src="IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()">
+            <p>My name is Bhargav Modukuru, I'm a 4th and final year Business Technology Management student at Toronto Metropolitan University pursuing a minor in Marketing. This webpage is a walk-through of my educational history, some courses I've taken along the way, and the amazing student clubs I've been part of.</p>
+        </section>
+
+        <h2 style="text-align: left; color: white;">Education</h2> <!-- Aligning text to the left in white colour -->
+        <ul>
+            <li>2021 - Present: Bachelors of Commerce (BComm): Toronto Metropolitan University</li>
+            <li>2019 - 2021: OSSD: Thornhill Secondary School</li>
+        </ul>
+        
+        <h2 style="text-align: left; color: white;">Favourite Courses</h2>
+        <ol>
+            <li><strong>ITM780:</strong> Website design and development.</li>
+            <li><strong>ITM750:</strong> Information System Project Management.</li>
+            <li><strong>ITM618:</strong> Python for decision making and data visualization.</li>
+        </ol>
+        
+        <h2 style="text-align: left; color: white;">Awards & Recognition</h2>
+        <ul>
+            <li>Entrance Scholarship of $1000: Toronto Metropolitan University</li>
+            <li>Top 25% Most Engaged Senior Student: Toronto Metropolitan University</li>
+            <li>Student Trustee Award: Thornhill Secondary School</li>
+        </ul>
+
+        <h2 style="text-align: left; color: white;">Extracurriculars</h2>
+        <ul>
+            <li>Creative Director @ Ted Rogers Sales Club</li>
+            <li>Corporate Relations Associate @ AIESEC in TMU</li>
+            <li>University Relations Manager/Social Media Manager @ AIESEC in TMU</li>
+            <li>Local Committee President @ AIESEC in TMU</li>
+            <li>Graphic Designer @ Thornhill Athletic Council</li>
+            <li>U18 Soccer, Right Winger</li>
+            <li>Photographer @ Thornhill Secondary Newspaper</li>
+        </ul>
+    </main>
 </body>
 </html>
