@@ -2,88 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added to ensure responsiveness for different screen sizes -->
     <title>Bhargav Modukuru's Website</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to external stylesheet for styling -->
 </head>
 
 <body>
+    <!-- Background Video -->
     <video autoplay muted loop id="background-video">
-        <source src="IMG_2354.mp44" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="IMG_2354.mp4" type="video/mp4">
     </video>
 
+    <!-- Header Section with Introduction and Name Prompt -->
     <header>
         <h1>Welcome, I'm Bhargav Modukuru</h1>
-        <button onclick="askName()">Enter Your Name</button>
-        <p id="displayName"></p>
+        <button onclick="askName()">What's Your Name?</button> <!-- Button to trigger the name input prompt -->
+        <p id="displayName"></p> <!-- Paragraph to display the entered name -->
     </header>
 
-    <div id="sidebar"> 
+    <!-- Sidebar Navigation Menu -->
+    <div id="sidebar">
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="mailto:bhargavamodukuru@gmail.com" class="nav-link" target="_blank">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1z1vtUFjIrKnYh0ztZPBSjQbHUUAIITr0/view?usp=sharing" class="nav-link" target="_blank">Resume</a></li>
-                <li><a href="https://www.linkedin.com/in/bhargav-modukuru/" class="nav-link" target="_blank">LinkedIn</a></li>
-                <li><button onclick="window.location.href='forms_index.html'" class="nav-link">Chat with Me</button></li>
+                <li><a href="mailto:bhargavamodukuru@gmail.com" class="nav-link" target="_blank">Contact</a></li> <!-- Contact link -->
+                <li><a href="https://drive.google.com/file/d/1z1vtUFjIrKnYh0ztZPBSjQbHUUAIITr0/view?usp=sharing" class="nav-link" target="_blank">Resume</a></li> <!-- Resume link -->
+                <li><a href="https://www.linkedin.com/in/bhargav-modukuru/" class="nav-link" target="_blank">LinkedIn</a></li> <!-- LinkedIn profile link -->
+                <li><button onclick="window.location.href='forms_index.html'" class="nav-link">Chat with Me</button></li> <!-- Button to navigate to chat -->
             </ul>
         </nav>
     </div>
 
+    <!-- Action Buttons Section -->
     <div class="buttons-container">
-        <button onclick="increaseTextSize()" class="action-button">Increase Text Size</button>
-        <button onclick="toggleColors()" class="action-button">Change Colors</button>
+        <button onclick="increaseTextSize()" class="action-button">Increase Text Size</button> <!-- Button to increase text size -->
+        <button onclick="toggleColors()" class="action-button">Change Colors</button> <!-- Button to change colors -->
     </div>
 
-    <audio controls>
-        <source src="ITM780 Lab 8 Audio.mp3" type="audio/mp3">
-    </audio>
-
+    <!-- Main Content Section -->
     <main>
+        <!-- About Me Section -->
         <section id="about">
-            <img id="profileImage" src="IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()">
+            <img id="profileImage" src="IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()"> <!-- Profile image with toggle for size change -->
             <p>My name is Bhargav Modukuru, I'm a 4th and final year Business Technology Management student at Toronto Metropolitan University pursuing a minor in Marketing. This webpage is a walk-through of my educational history, some courses I've taken along the way, and the amazing student clubs I've been part of.</p>
         </section>
-        
-        <section id="images">
-            <h2>Photos from my Montreal Trip</h2>
-            <div class="image-container">
-                <img id="Image1" src="MTL Trade Centre.jpg" alt="A photo of the Montreal Trade Centre from a recent trip." onclick="toggleImageSize()"> 
-                <img id="Image2" src="Black and White.jpg" alt="A picture of a car racing up a hill in Downtown Montreal." onclick="toggleImageSize()"> 
-                <img id="Image3" src="Alphabet Coffee.jpg" alt="Visited the locally renowned Alphabet Cafe to try some Freddo Espresso." onclick="toggleImageSize()">
-            </div>
-        </section>
 
-        <h2>Education</h2>
-        <ul>
-            <li>2021 - Present: Bachelors of Commerce (BComm): Toronto Metropolitan University</li>
-            <li>2019 - 2021: OSSD: Thornhill Secondary School</li>
-        </ul>
-        
-        <h2>Favourite Courses</h2>
-        <ol>
-            <li><strong>ITM780:</strong> Website design and development.</li>
-            <li><strong>ITM750:</strong> Information System Project Management.</li>
-            <li><strong>ITM618:</strong> Python for decision making and data visualization.</li>
-        </ol>
-        
-        <h2>Awards & Recognition</h2>
-        <ul>
-            <li>Entrance Scholarship of $1000: Toronto Metropolitan University</li>
-            <li>Top 25% Most Engaged Senior Student: Toronto Metropolitan University</li>
-            <li>Student Trustee Award: Thornhill Secondary School</li>
-        </ul>
+        <!-- Education, Favourite Courses, Awards, and Extracurriculars Sections -->
+        <div class="container">
+            <!-- Education Section -->
+            <section class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>2021 - Present: Bachelors of Commerce (BComm): Toronto Metropolitan University</li>
+                    <li>2019 - 2021: OSSD: Thornhill Secondary School</li>
+                </ul>
+            </section>
 
-        <h2>Extracurriculars</h2>
-        <ul>
-            <li>Creative Director @ Ted Rogers Sales Club</li>
-            <li>Corporate Relations Associate @ AIESEC in TMU</li>
-            <li>University Relations Manager/Social Media Manager @ AIESEC in TMU</li>
-            <li>Local Committee President @ AIESEC in TMU</li>
-            <li>Graphic Designer @ Thornhill Athletic Council</li>
-            <li>U18 Soccer, Right Winger</li>
-            <li>Photographer @ Thornhill Secondary Newspaper</li>
-        </ul>
+            <!-- Favourite Courses Section -->
+            <section class="favourite-courses">
+                <h2>Favourite Courses</h2>
+                <ol>
+                    <li><strong>ITM780:</strong> Website design and development.</li>
+                    <li><strong>ITM750:</strong> Information System Project Management.</li>
+                    <li><strong>ITM618:</strong> Python for decision making and data visualization.</li>
+                </ol>
+            </section>
+
+            <!-- Awards & Recognition Section -->
+            <section class="awards-recognition">
+                <h2>Awards & Recognition</h2>
+                <ul>
+                    <li>Entrance Scholarship of $1000: Toronto Metropolitan University</li>
+                    <li>Top 25% Most Engaged Senior Student: Toronto Metropolitan University</li>
+                    <li>Student Trustee Award: Thornhill Secondary School</li>
+                </ul>
+            </section>
+
+            <!-- Extracurricular Activities Section -->
+            <section class="extracurriculars">
+                <h2>Extracurriculars</h2>
+                <ul>
+                    <li>Creative Director @ Ted Rogers Sales Club</li>
+                    <li>Corporate Relations Associate @ AIESEC in TMU</li>
+                    <li>University Relations Manager/Social Media Manager @ AIESEC in TMU</li>
+                    <li>Local Committee President @ AIESEC in TMU</li>
+                    <li>Graphic Designer @ Thornhill Athletic Council</li>
+                    <li>U18 Soccer, Right Winger</li>
+                    <li>Photographer @ Thornhill Secondary Newspaper</li>
+                </ul>
+            </section>
+        </div>
     </main>
+
+    <!-- Images Section with Photo Gallery -->
+    <section id="images">
+        <h2 style="text-align: center; font-family: Arial, sans-serif;">Photos from my recent Montreal Trip</h2>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px;">
+            <!-- Photo 1 -->
+            <div style="text-align: center; flex: 1;">
+                <img id="Image1" src="MTL Trade Centre.jpg" alt="A photo of the Montreal Trade Centre from a recent trip." onclick="toggleImageSize()" onerror="this.alt='Image not found'; this.style.color='red';" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+                <p>MTL Trade Centre, Montreal, Canada, 9 October 2024</p>
+                <button onclick="alert(document.getElementById('Image1').alt)" style="background-color: #3f96ed; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Show Alt Text</button>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div style="text-align: center; flex: 1;">
+                <img id="Image2" src="Black and White.jpg" alt="A picture of a car racing up a hill in Downtown Montreal." onclick="toggleImageSize()" onerror="this.alt='Image not found'; this.style.color='red';" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+                <p>Car Racing Up a Hill, Montreal, Canada, 9 October 2024</p>
+                <button onclick="alert(document.getElementById('Image2').alt)" style="background-color: #3f96ed; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Show Alt Text</button>
+            </div>
+
+            <!-- Photo 3 -->
+            <div style="text-align: center; flex: 1;">
+                <img id="Image3" src="Alphabet Coffee.jpg" alt="Visited the locally renowned Alphabet Cafe to try some Freddo Espresso." onclick="toggleImageSize()" onerror="this.alt='Image not found'; this.style.color='red';" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+                <p>Alphabet Cafe, Montreal, Canada, 9 October 2024</p>
+                <button onclick="alert(document.getElementById('Image3').alt)" style="background-color: #3f96ed; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Show Alt Text</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to External JavaScript File -->
+    <script src="main.js"></script> 
 </body>
 </html>

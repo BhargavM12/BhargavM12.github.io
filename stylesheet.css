@@ -1,43 +1,46 @@
 /* General styling for the entire webpage */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* More modern font */
-    font-size: 16px; /* Slightly larger default font size */
-    background-color: #101c2e; /* Dark blue background with a bit of depth */
-    color: #ffffff; /* White text for better contrast */
+    font-family: Helvetica, Arial, sans-serif; /* Modern font */
+    font-size: 16px; /* Default font size */
+    background-color: #F4F6F8; /* Soft light gray background */
+    color: #2F3B48; /* Dark blue-grey text for contrast */
     margin: 0;
     padding: 0;
     padding-top: 80px; /* Adds space for fixed header */
 }
 
-/* Video Background styling */
+/* Video Background inside header */
 #background-video {
-    position: fixed; /* Fixes the video in place */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Makes the video cover the entire width */
-    height: 100%; /* Makes the video cover the entire height */
-    object-fit: cover; /* Ensures the video fills the screen */
-    z-index: -1; /* Places the video behind other content */
+    width: 100%; /* Full width */
+    height: 45%; /* Height of the video */
+    object-fit: cover; /* Ensures video covers the area */
+    z-index: -1; /* Places video behind content */
 }
 
 /* Header styling */
 header {
+    position: relative;
     text-align: center;
-    padding: 30px 20px;
-    background-color: #264a71; /* Deep blue background for header */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for depth */
+    padding: 50px 20px; /* Adds padding */
+    color: #ffffff; /* White text */
+    border-radius: 12px; /* Rounded corners */
 }
 
+/* Main Heading (h1) styling */
 h1 {
-    font-size: 36px; /* Large, bold heading */
-    color: #f1f1f1; /* Lighter white color */
-    font-weight: 600;
+    font-size: 30pt;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Sidebar styling */
 #sidebar {
     width: 100%;
-    background-color: #2f3b48; /* Darker, neutral blue */
+    background-color: #2F3B48; /* Dark blue */
     position: fixed;
     top: 0;
     left: 0;
@@ -58,89 +61,88 @@ h1 {
     margin: 0;
 }
 
-/* Styling for navigation links */
+/* Navigation link and button styles */
 .nav-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #5a76a0; /* Soft blue for the links */
+    background-color: #5A76A0; /* Soft blue for links */
     color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
 button.nav-link {
-    background-color: #40678f; /* Button-specific color */
+    background-color: #40678F; /* Button-specific color */
     border: none;
     cursor: pointer;
 }
 
-/* Hover effect for buttons and links */
 button.nav-link:hover, .nav-link:hover {
-    background-color: #364e66;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #364E66;
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* Profile Image styling */
+/* Profile image styling */
 img#profileImage {
-    max-width: 150px; /* Limits image width */
-    border-radius: 0; /* Removes rounded corners (no circular shape) */
-    margin: 20px auto; /* Centers image with vertical margin */
-    display: block; /* Makes the image a block element */
+    max-width: 200px;
+    border-radius: 0; /* No rounded borders */
+    margin: 20px auto;
+    display: block;
 }
 
 /* Paragraph styling */
 p {
     font-size: 18px;
-    color: #c7d4df; /* Light blue-gray for text */
+    color: #2F3B48;
     line-height: 1.8;
     text-align: center;
     margin: 20px auto;
-    width: 80%; /* Adjust width for better readability */
+    width: 80%; /* Adjust width for readability */
 }
 
-/* Table styling */
-.table-container {
-    display: table;
-    width: 100%;
-    margin: 20px 0;
+/* Container styling for sections */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Section title (h2) styling */
+h2 {
+    color: #2F3B48;
+    font-size: 1.5em;
     text-align: center;
+    font-weight: bold;
 }
 
-.table-row {
-    display: table-row;
+/* List styling for Education, Courses, Awards, etc. */
+ul, ol {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
-.table-cell {
-    display: table-cell;
-    padding: 12px;
-    border: 1px solid #d3d3d3;
-}
-
-/* Form styling */
+/* Form container styling */
 form {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px 40px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced form shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
     max-width: 500px;
     margin: 40px auto;
 }
 
-h2, h4 {
-    color: #333;
-    font-size: 1.2em;
-    text-align: center;
-}
-
+/* Label and input field styling */
 label {
     display: block;
     font-size: 1em;
     margin-bottom: 8px;
-    color: #555;
+    color: #2F3B48;
 }
 
-/* Input and select fields styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -152,7 +154,7 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 1em;
-    background-color: #f8f8f8; /* Lighter background for inputs */
+    background-color: #f8f8f8; /* Light background for inputs */
 }
 
 /* Submit and reset button styling */
@@ -162,20 +164,20 @@ input[type="reset"] {
     padding: 12px;
     font-size: 1.1em;
     color: #fff;
-    background-color: #5a76a0;
+    background-color: #4B8DA6;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effects for buttons */
+/* Hover effect for buttons */
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #40678f;
+    background-color: #40678F;
 }
 
-/* Button container layout */
+/* Button container for form actions */
 input[type="submit"],
 input[type="reset"] {
     display: inline-block;
@@ -183,31 +185,32 @@ input[type="reset"] {
     margin: 5px 2px;
 }
 
-/* Adjust main content to avoid overlap with fixed sidebar */
+/* Adjust content to avoid overlap with fixed sidebar */
 main {
-    padding-top: 120px; /* Adjust for space above */
+    padding-top: 120px; /* Adjust top padding */
 }
 
-/* Add a flex container for images */
+/* Flex container for images */
 .image-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px; /* Gap between images */
     margin-top: 30px;
+    flex-wrap: wrap; /* Wrap images on smaller screens */
 }
 
 /* Individual image styling */
 img#Image1, img#Image2, img#Image3 {
-    max-width: 300px;
-    width: 100%;
+    width: 32%;
+    max-width: 400px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover effect for images */
 img#Image1:hover, img#Image2:hover, img#Image3:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
