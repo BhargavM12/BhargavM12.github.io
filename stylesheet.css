@@ -6,6 +6,7 @@ body {
     color: #ffffff; /* White text color */
     margin: 0; /* Removes default body margin */
     padding: 0; /* Removes default body padding */
+    padding-top: 60px; /* so that "meet bhargav modukuru does not get hidden by the nav bar */
 }
 
 /* Header styling */
@@ -14,10 +15,17 @@ header {
     padding: 20px; /* Adds padding for space around the text */
 }
 
+
 /* Sidebar styling */
 #sidebar {
     width: 100%; /* Sets sidebar to full-width */
-    background-color: #2c3e50; 
+    background-color: #2c3e50;
+    position: fixed; /* Fixes the sidebar to the top */
+    top: 0; /* Keeps the navbar at the top of the page */
+    left: 0; /* Aligns with the left edge of the page */
+    z-index: 1000; /* Keeps it on top of other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds shadow for better visibility */
+    margin-top: 0px; /* Adjust this based on your navbar height */
 }
 
 #sidebar ul {
@@ -25,8 +33,10 @@ header {
     justify-content: space-around; /* Evenly spaces items horizontally */
     padding: 10px 0; /* Adds vertical padding */
     margin: 0; /* Removes default list margin */
+    list-style: none; /* Removes list styling */
 }
 
+/* Sidebar links styling */
 #sidebar ul li {
     margin: 0; /* Ensures list items have no margin */
 }
@@ -55,6 +65,7 @@ button.nav-link:hover, .nav-link:hover {
     color: #ffffff; /* Ensures text color stays white */
 }
 
+/* Main Heading (h1) styling */
 h1 {
     font-size: 30pt; /* Large font size */
     color: #ffffff; /* White color */
@@ -62,12 +73,14 @@ h1 {
     margin-bottom: 20px; /* Adds space below heading */
 }
 
+/* Subheading (h2) styling */
 h2 {
     font-size: 22pt; /* Medium font size */
     color: #e0e0e0; /* Light gray color */
     margin-top: 40px; /* Adds space above subheading */
 }
 
+/* Profile Image styling */
 img#profileImage {
     max-width: 150px; /* Limits image width */
     border-radius: 8px; /* Slightly rounded corners */
@@ -75,6 +88,7 @@ img#profileImage {
     display: block; /* Makes the image a block element */
 }
 
+/* Paragraph styling */
 p {
     font-size: 14pt; /* Slightly larger font size */
     color: #e6f0f9; /* Light blue color for text */
@@ -84,6 +98,7 @@ p {
     width: 70%; /* Limits paragraph width */
 }
 
+/* Table styling */
 .table-container {
     display: table; /* Displays the container as a table */
     width: 100%; /* Full width for container */
@@ -101,8 +116,7 @@ p {
     border: 1px solid #ffffff; /* White border for cells */
 }
 
-/* styling the form for Lab 6 */
-
+/* Form styling */
 form {
     background-color: #ffffff; /* White background for form */
     border-radius: 8px; /* Rounds form corners */
@@ -113,21 +127,22 @@ form {
     margin: 20px auto; /* Centers form with vertical spacing */
 }
 
+/* Additional heading styles within form */
 h2, h4 {
     color: #333; /* Dark text color */
     font-size: 1.2em; /* Slightly larger font size */
     text-align: center; /* Centers text */
 }
 
-
+/* Label styling */
 label {
-    display: block; /* Each label on a new line for a cleaner display */
+    display: block; /* Each label on a new line */
     font-size: 0.9em; /* Slightly smaller font size */
     margin-bottom: 5px; /* Space below label */
     color: #555; /* Medium gray color */
 }
 
-
+/* Input and select fields styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -186,4 +201,34 @@ input[type="reset"] {
     display: inline-block; /* Aligns buttons inline */
     width: calc(50% - 5px); /* Each button half width minus small margin */
     margin: 5px 2px; /* Adds space around buttons */
+}
+
+/* Adjust main content to avoid overlap with fixed sidebar */
+main {
+    padding-top: 80px; /* Adjust this value to match the height of your sidebar */
+}
+
+/* Slideshow container */
+#slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Hide all images by default */
+.slide {
+    display: none;
+}
+
+/* Fade transition for slideshow */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Keyframes for fading images */
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }

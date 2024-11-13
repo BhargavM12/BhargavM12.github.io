@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Bhargav Modukuru's Website</title>
-    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to the css stylesheet -->
-    <script src="main.js"></script>   <!-- Link to the external JavaScript filey -->
+    <link rel="stylesheet" href="stylesheet.css"> <!-- Link to the CSS stylesheet -->
+    <script src="main.js"></script>   <!-- Link to the external JavaScript file -->
 </head>
 
 <body>
     <header>
-        <h1>Meet Bhargav Modukuru</h1>  <!-- Main webpage header-->
+        <h1>Welcome, I'm Bhargav Modukuru</h1>  <!-- Main webpage header-->
         <button onclick="askName()">Enter Your Name</button>
         <p id="displayName"></p>  <!-- Display name inputted in the prompt -->
     </header>
@@ -17,25 +17,49 @@
     <div id="sidebar"> 
         <nav aria-label="Main Navigation">
             <ul>
-                <a href="mailto:bhargavamodukuru@gmail.com" class="nav-link" target="_blank">Contact</a></li>
-                <a href="https://drive.google.com/file/d/1z1vtUFjIrKnYh0ztZPBSjQbHUUAIITr0/view?usp=sharing" class="nav-link" target="_blank">Resume</a></li> <!-- link to resume  -->
-                <a href="https://www.linkedin.com/in/bhargav-modukuru/" class="nav-link" target="_blank">LinkedIn</a></li> <!-- LinkedIN URL -->
-                <button onclick="window.location.href='forms_index.html'" class="nav-link">Chat with Me</button></li> <!-- Added a chat button to the navigation, linking the form for better navigation  -->
+                <li><a href="mailto:bhargavamodukuru@gmail.com" class="nav-link" target="_blank">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/1z1vtUFjIrKnYh0ztZPBSjQbHUUAIITr0/view?usp=sharing" class="nav-link" target="_blank">Resume</a></li> <!-- link to resume  -->
+                <li><a href="https://www.linkedin.com/in/bhargav-modukuru/" class="nav-link" target="_blank">LinkedIn</a></li> <!-- LinkedIN URL -->
+                <li><button onclick="window.location.href='forms_index.html'" class="nav-link">Chat with Me</button></li> <!-- Added a chat button to the navigation, linking the form for better navigation  -->
             </ul>
         </nav>
     </div>
-    
-    <p id="media-caption">Welcome Audio</p>
-    <div id="media" style="margin: 15px 0;">
-        <audio id="myaudio" controls> 
-            <source src="ITM780 Lab 8 Audio.mp3" type="audio/mp3">
-            </audio>
+
+    <!-- Fixed buttons outside the navigation bar -->
+    <div class="buttons-container">
+        <button onclick="increaseTextSize()" class="action-button">Increase Text Size</button>
+        <button onclick="toggleColors()" class="action-button">Change Colors</button>
     </div>
-    
+
+    <audio controls>
+        <source src="ITM780 Lab 8 Audio.mp3" type="audio/mp3">
+    </audio>
+
     <main>
         <section id="about">
             <img id="profileImage" src="IMG_9614.JPG" alt="Bhargav Modukuru" onclick="toggleImageSize()">
             <p>My name is Bhargav Modukuru, I'm a 4th and final year Business Technology Management student at Toronto Metropolitan University pursuing a minor in Marketing. This webpage is a walk-through of my educational history, some courses I've taken along the way, and the amazing student clubs I've been part of.</p>
+        </section>
+    
+        <section id="images">
+            <h2 style="text-align: left; color: white;">Recent Photos</h2>
+        
+            <div id="slideshow-container">
+                <div class="slide fade">
+                    <img src="MTL Trade Centre.jpg" alt="A photo of the Montreal Trade Centre from a recent trip." />
+                    <button onclick="displayAltText(1)">Show Alt-text for Image 1</button>
+                </div>
+        
+                <div class="slide fade">
+                    <img src="Black and White.jpg" alt="A picture of a car racing up a hill in Downtown Montreal." />
+                    <button onclick="displayAltText(2)">Show Alt-text for Image 2</button>
+                </div>
+        
+                <div class="slide fade">
+                    <img src="Alphabet Coffee.jpg" alt="Visited the locally renowned Alphabet Cafe to try some Freddo Espresso." />
+                    <button onclick="displayAltText(3)">Show Alt-text for Image 3</button>
+                </div>
+            </div>
         </section>
 
         <h2 style="text-align: left; color: white;">Education</h2> <!-- Aligning text to the left in white colour -->

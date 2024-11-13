@@ -26,3 +26,52 @@ function resetLink(link) {
     link.style.color = '';                // Reset text color
     link.style.backgroundColor = '';      // Reset background color
 }
+
+// New function to increase text size
+function increaseTextSize() {
+    const body = document.querySelector('body');
+    let currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
+    let newSize = parseFloat(currentSize) * 1.2;
+    body.style.fontSize = newSize + 'px';
+}
+function toggleColors() {
+    const body = document.querySelector('body');
+    const currentBgColor = window.getComputedStyle(body, null).getPropertyValue('background-color');
+    
+    // Use high-contrast color scheme (black text on light yellow background)
+    if (currentBgColor === 'rgb(255, 255, 255)') {  // White background
+        body.style.backgroundColor = '#FFFFE0';  // Light yellow background (high contrast)
+        body.style.color = '#000000';  // Black text color
+    } else {
+        body.style.backgroundColor = '#FFFFFF';  // White background
+        body.style.color = '#000000';  // Black text color
+    }
+}
+
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    // Reset all slides to be hidden
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Increment the slide index
+    slideIndex++;
+
+    // Reset to the first slide if it's the end
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    // Display the current slide
+    slides[slideIndex - 1].style.display = "block";
+
+    // Call the function every 5 seconds
+    setTimeout(showSlides, 5000);
+}
+
+// Initialize the slideshow
+showSlides();
