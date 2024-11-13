@@ -55,7 +55,6 @@ button.nav-link:hover, .nav-link:hover {
     color: #ffffff; /* Ensures text color stays white */
 }
 
-/* Main Heading (h1) styling */
 h1 {
     font-size: 30pt; /* Large font size */
     color: #ffffff; /* White color */
@@ -63,14 +62,12 @@ h1 {
     margin-bottom: 20px; /* Adds space below heading */
 }
 
-/* Subheading (h2) styling */
 h2 {
     font-size: 22pt; /* Medium font size */
     color: #e0e0e0; /* Light gray color */
     margin-top: 40px; /* Adds space above subheading */
 }
 
-/* Profile Image styling */
 img#profileImage {
     max-width: 150px; /* Limits image width */
     border-radius: 8px; /* Slightly rounded corners */
@@ -78,7 +75,6 @@ img#profileImage {
     display: block; /* Makes the image a block element */
 }
 
-/* Paragraph styling */
 p {
     font-size: 14pt; /* Slightly larger font size */
     color: #e6f0f9; /* Light blue color for text */
@@ -88,7 +84,6 @@ p {
     width: 70%; /* Limits paragraph width */
 }
 
-/* Table styling */
 .table-container {
     display: table; /* Displays the container as a table */
     width: 100%; /* Full width for container */
@@ -106,7 +101,8 @@ p {
     border: 1px solid #ffffff; /* White border for cells */
 }
 
-/* Form styling */
+/* styling the form for Lab 6 */
+
 form {
     background-color: #ffffff; /* White background for form */
     border-radius: 8px; /* Rounds form corners */
@@ -117,22 +113,21 @@ form {
     margin: 20px auto; /* Centers form with vertical spacing */
 }
 
-/* Additional heading styles within form */
 h2, h4 {
     color: #333; /* Dark text color */
     font-size: 1.2em; /* Slightly larger font size */
     text-align: center; /* Centers text */
 }
 
-/* Label styling */
+
 label {
-    display: block; /* Each label on a new line */
+    display: block; /* Each label on a new line for a cleaner display */
     font-size: 0.9em; /* Slightly smaller font size */
     margin-bottom: 5px; /* Space below label */
     color: #555; /* Medium gray color */
 }
 
-/* Input and select fields styling */
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
